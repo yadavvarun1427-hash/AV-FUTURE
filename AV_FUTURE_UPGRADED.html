@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1f36">
+<title>AV FUTURE</title>
+<style>
+:root{--n:#0b1f36;--b:#1f5fae;--g:#18764b;--o:#c75b18;--p:#6d3db2;--bg:#f3f6fb;--card:#fff;--line:#e4e9f1;--muted:#677385}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eef4ff,#f8fafc 50%,#eef7f1);color:#152238}
+header{background:linear-gradient(135deg,#0b1f36,#17446f);color:#fff;padding:28px 16px;text-align:center}
+.brand{display:flex;justify-content:center;align-items:center;gap:12px}.logo{width:60px;height:60px;border-radius:18px;display:grid;place-items:center;font-size:31px;background:#ffffff16;border:1px solid #ffffff2c}
+h1{margin:0;font-size:31px}.sub{margin-top:6px;opacity:.9}
+.wrap{max-width:1050px;margin:auto;padding:15px}
+.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.tile,.toolbtn{border:0;border-radius:15px;padding:14px 10px;color:#fff;font-weight:800;text-align:center;box-shadow:0 8px 22px #0b1f3615;cursor:pointer;font-size:14px}
+.t1{background:linear-gradient(135deg,#18764b,#24975f)}.t2{background:linear-gradient(135deg,#c75b18,#e27126)}.t3{background:linear-gradient(135deg,#1f5fae,#3a79c4)}.t4{background:linear-gradient(135deg,#6d3db2,#8a56cc)}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:14px;box-shadow:0 8px 26px #0b1f3610}
+.title{margin:0 0 12px;font-size:21px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}
+.mini{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fbfdff}
+.big{font-size:28px;font-weight:900;margin:5px 0}
+.toolbtn{width:100%;background:linear-gradient(135deg,#0f2c4c,#1f5fae);margin:0}
+.bar{display:grid;grid-template-columns:135px 1fr 52px;gap:9px;align-items:center;margin:10px 0}.track{height:18px;background:#e8edf4;border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#1f5fae,#1f8a55);border-radius:999px}
+.note{font-size:12px;color:var(--muted);line-height:1.45}
+footer{text-align:center;padding:28px;color:var(--muted);font-size:12px}
+input,select,button.action{width:100%;padding:12px;border-radius:11px;border:1px solid #cbd5e1;font-size:15px;margin-top:7px}
+button.action{background:var(--n);color:#fff;border:0;font-weight:800}
+label{display:block;font-size:13px;font-weight:700;margin-top:9px}
+.fullscreen{position:fixed;inset:0;background:#f5f8fc;z-index:9999;display:none;overflow-y:auto}
+.fs-head{position:sticky;top:0;background:linear-gradient(135deg,#0b1f36,#17446f);color:white;padding:14px;display:flex;gap:12px;align-items:center;z-index:2;box-shadow:0 3px 12px #0002}
+.back{width:auto;border:0;background:#ffffff18;color:#fff;padding:9px 12px;border-radius:10px;font-weight:800}
+.fs-title{font-size:19px;font-weight:900}.fs-body{max-width:850px;margin:auto;padding:18px 15px 40px}
+.info{background:white;border:1px solid var(--line);border-radius:16px;padding:17px;margin:12px 0;box-shadow:0 6px 20px #0b1f360d;line-height:1.58}
+.info h2,.info h3{margin-top:0}.official{display:inline-block;background:#14532d;color:white;text-decoration:none;padding:10px 12px;border-radius:10px;font-weight:800;margin:6px 5px 0 0}
+.badge{display:inline-block;background:#edf2f7;border-radius:999px;padding:5px 9px;font-size:12px;font-weight:700}
+.resultbox{background:#eef6ff;border:1px solid #cfe2fb;border-radius:14px;padding:16px;line-height:1.55;margin-top:12px}
+.livegrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:11px}.jobcard{border:1px solid var(--line);border-radius:14px;padding:14px;background:#fbfdff}.jobcard h3{margin:0 0 7px}.pill{display:inline-block;padding:5px 8px;border-radius:999px;background:#eaf2ff;font-size:11px;font-weight:800;margin:3px}.warn{background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:12px}.good{background:#ecfdf5;border:1px solid #bbf7d0;border-radius:12px;padding:12px}.searchrow{display:grid;grid-template-columns:1fr 150px;gap:8px}@media(max-width:680px){.quick{grid-template-columns:1fr 1fr}.bar{grid-template-columns:95px 1fr 44px;font-size:12px}.searchrow{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header><div class="brand"><div class="logo">🪖</div><div><h1>AV FUTURE</h1><div class="sub">Agniveer Career Companion</div></div></div></header>
+
+<main class="wrap">
+<div class="quick">
+<button class="tile t1" onclick="openPage('army')">🪖 Join Army</button>
+<button class="tile t2" onclick="openPage('jobs')">🔥 Latest Jobs</button>
+<button class="tile t3" onclick="openPage('future')">🎯 My Future</button>
+<button class="tile t4" onclick="openPage('resettle')">♻️ Resettlement</button>
+</div>
+
+<section class="card">
+<h2 class="title">📘 अग्निवीर — Quick View</h2>
+<div class="grid">
+<div class="mini"><b>सेवा अवधि</b><div class="big">4 वर्ष</div></div>
+<div class="mini"><b>Regular Cadre</b><div class="big">Up to 25%</div></div>
+<div class="mini"><b>Seva Nidhi</b><div class="big">≈ ₹11.71L</div></div>
+<div class="mini"><b>Life Insurance</b><div class="big">₹48L</div></div>
+</div>
+<button class="toolbtn" style="margin-top:12px" onclick="openPage('policy')">पूरी अग्निवीर Policy खोलें →</button>
+</section>
+
+<section class="card">
+<h2 class="title">📊 Civil Reservation Snapshot</h2>
+<div class="bar"><b>CAPF / AR</b><div class="track"><div class="fill" style="width:100%"></div></div><b>50%</b></div>
+<div class="bar"><b>Defence</b><div class="track"><div class="fill" style="width:20%"></div></div><b>10%</b></div>
+<div class="bar"><b>Railway L1</b><div class="track"><div class="fill" style="width:20%"></div></div><b>10%</b></div>
+<div class="bar"><b>Railway L2+</b><div class="track"><div class="fill" style="width:10%"></div></div><b>5%</b></div>
+<button class="toolbtn" onclick="openPage('reservation')">Reservation की पूरी जानकारी →</button>
+</section>
+
+<section class="card">
+<h2 class="title">⚡ Smart Career Center</h2>
+<div class="grid">
+<button class="toolbtn" onclick="openPage('livejobs')">🔴 Live Job Center</button>
+<button class="toolbtn" onclick="openPage('bestjobs')">✨ Best Jobs For Me</button>
+<button class="toolbtn" onclick="openPage('alerts')">🔔 Job Alerts</button>
+<button class="toolbtn" onclick="openPage('stateverify')">✅ Verified State Policies</button>
+</div>
+<p class="note">Live/verified status official portals से confirm किया जाता है; static website बिना backend के automatic government API sync नहीं कर सकती.</p>
+</section>
+
+<section class="card">
+<h2 class="title">🚀 AV FUTURE PRO</h2>
+<div class="grid">
+<button class="toolbtn" onclick="openPage('score')">🏆 AV Future Score</button>
+<button class="toolbtn" onclick="openPage('elig')">🔎 Eligibility Checker</button>
+<button class="toolbtn" onclick="openPage('deadline')">⏰ Last Date Countdown</button>
+<button class="toolbtn" onclick="openPage('salary')">💵 Salary Comparison</button>
+<button class="toolbtn" onclick="openPage('saved')">⭐ My Saved Jobs</button>
+<button class="toolbtn" onclick="openPage('state')">📍 State Dashboard</button>
+<button class="toolbtn" onclick="openPage('quiz')">📚 Exam Practice</button>
+<button class="toolbtn" onclick="openPage('profile')">🔐 My AV Profile</button>
+<button class="toolbtn" onclick="openPage('service')">⏳ Service Countdown</button>
+<button class="toolbtn" onclick="openPage('seva')">💰 Seva Nidhi Calculator</button>
+<button class="toolbtn" onclick="openPage('documents')">📄 Documents Checklist</button>
+<button class="toolbtn" onclick="openPage('physical')">🏃 Physical & Exam Guide</button>
+</div>
+</section>
+</main>
+
+<footer>AV FUTURE • Verified-source career guidance • Last policy verification: 20 Aug 2026</footer>
+
+<div id="fs" class="fullscreen">
+  <div class="fs-head"><button class="back" onclick="closePage()">← Back</button><div id="fsTitle" class="fs-title">AV FUTURE</div></div>
+  <div class="fs-body" id="fsBody"></div>
+</div>
+
+<script>
+const official={
+ army:'https://www.joinindianarmy.nic.in/',
+ pibPolicy:'https://www.pib.gov.in/PressReleasePage.aspx?PRID=1834227&lang=1&reg=1',
+ capf:'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287043&lang=1&reg=48',
+ defence:'https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1835048',
+ railway:'https://ncr.indianrailways.gov.in/uploads/files/1686893193735-RBE%2068_2023_merged.pdf',
+ ssc:'https://ssc.gov.in/',
+ rrb:'https://www.rrbapply.gov.in/',
+ ncs:'https://www.ncs.gov.in/',
+ desw:'https://www.desw.gov.in/en/Self-Employment-Schemes-DGR',
+ skill:'https://www.skillindia.gov.in/',
+ mudra:'https://www.mudra.org.in/'
+};
+function info(title,body){return `<div class="info"><h2>${title}</h2>${body}</div>`}
+function link(url,label){return `<a class="official" href="${url}" target="_blank" rel="noopener">${label} ↗</a>`}
+function openPage(type){
+  const fs=document.getElementById('fs'), b=document.getElementById('fsBody'), t=document.getElementById('fsTitle');
+  let title='AV FUTURE', body='';
+  if(type==='army'){title='🪖 Join Indian Army';body=
+    info('Indian Army Official Recruitment Portal',`<p>Agniveer और Indian Army की अन्य भर्ती categories के लिए सबसे महत्वपूर्ण source <b>Join Indian Army official portal</b> है। यहीं पर registration, online application, category-wise eligibility, Common Entrance Examination (CEE), admit card, rally schedule, document instructions और result से जुड़ी जानकारी publish होती है.</p>
+<p>Application करते समय अपना नाम, date of birth, Aadhaar details, education details और category information बिल्कुल certificate के अनुसार भरें। छोटी spelling mistake भी बाद में document verification में problem दे सकती है।</p>
+<p><b>सुरक्षा:</b> किसी unofficial agent, WhatsApp group या social-media page पर भरोसा करके payment न करें। Recruitment fee, dates और selection process हमेशा official notification से verify करें। Army recruitment merit और prescribed process पर आधारित होता है.</p>${link(official.army,'Join Indian Army Official')}`)+
+    info('Application से पहले क्या तैयार रखें?',`<p>Application से पहले Aadhaar/identity proof, active mobile number, working email ID, 10th/12th/ITI/Diploma/Graduation certificates, recent photograph, signature और category/domicile certificates तैयार रखें। जिन documents की expiry होती है, उनकी validity भी check करें.</p>
+<p>Scanned documents साफ होने चाहिए और official notification में दिए file size, format और dimensions के अनुसार होने चाहिए। Application submit करने के बाद acknowledgement/application number का screenshot या PDF सुरक्षित रखें।</p>
+<p>CEE या rally के समय original documents और required photocopies अलग folder में रखें ताकि verification में समय न लगे.</p>`);
+  }
+  if(type==='policy'){title='📘 अग्निवीर की पूरी नीति';body=
+    info('सेवा और Regular Cadre',`<p>AGNIPATH scheme के तहत Agniveers को respective Service Acts के अंतर्गत सामान्यतः <b>4 वर्ष</b> के लिए enrol किया जाता है। इस अवधि में military training, trade/role specific training, discipline, operational exposure और service requirements के अनुसार duties होती हैं.</p>
+<p>चार वर्ष की engagement पूरी होने के बाद सभी Agniveers automatically regular cadre में नहीं जाते। Organisational requirement, Armed Forces की लागू policy, performance और centralised objective assessment के आधार पर प्रत्येक specific batch के <b>up to 25%</b> Agniveers को regular cadre में enrolment का अवसर मिल सकता है.</p>
+<p>इसलिए service के दौरान physical fitness, discipline, professional competence, conduct और assigned duties में performance महत्वपूर्ण रहती है। अंतिम decision संबंधित Service की current policy और selection mechanism के अनुसार होता है.</p>${link(official.pibPolicy,'Official Cabinet/PIB Policy')}`)+
+    info('वेतन, Corpus और Seva Nidhi',`<p>Original policy table में customised monthly package 1st year ₹30,000, 2nd year ₹33,000, 3rd year ₹36,500 और 4th year ₹40,000 दिया गया था। Package का एक निर्धारित हिस्सा Agniveer Corpus Fund में जाता है और Government matching contribution करती है.</p>
+<p>Original scheme के अनुसार 4 years की service पूरी होने पर applicable interest सहित लगभग <b>₹11.71 lakh Seva Nidhi</b> का reference amount बताया गया था। यह amount retirement pension नहीं है; यह corpus-based exit package है.</p>
+<p>Actual final amount contribution period, applicable interest, deductions/terms और official records के अनुसार तय होगा। इसलिए किसी भी calculator को केवल estimate समझें और final settlement के लिए official service documents को authoritative source मानें.</p>`)+
+    info('Insurance और Skills',`<p>Engagement period के दौरान मूल policy में <b>₹48 lakh non-contributory life insurance cover</b> का प्रावधान दिया गया था। इसके अलावा duty-related compensation, disability या death benefits की applicability circumstances और current service rules पर निर्भर कर सकती है.</p>
+<p>Service के दौरान प्राप्त skills, technical exposure और experience को future civilian employment में उपयोगी बनाने के लिए skill recognition/certification की व्यवस्था का भी उल्लेख किया गया है। यह future jobs, technical work, security sector और skill-based employment में मदद कर सकता है.</p>
+<p class="note">Current service-specific instructions, amendments, insurance terms और benefit rules समय के साथ बदल सकते हैं। इसलिए latest Service order/notification से verify करना जरूरी है.</p>`);
+  }
+  if(type==='reservation'){title='📊 Ex-Agniveer Reservation';body=
+    info('CAPFs & Assam Rifles — 50%',`<p>21 July 2026 के MHA/PIB reply के अनुसार Constable (GD) in CAPFs और Rifleman in Assam Rifles के लिए Ex-Agniveer category में <b>50% vacancies reservation</b> का provision बताया गया है। साथ ही prescribed upper age limit में <b>3 years relaxation</b> और first batch of Ex-Agniveers के लिए <b>5 years relaxation</b> का provision stated है.</p>
+<p>उसी reply में PST, PET और written examination से exemption का भी उल्लेख किया गया है। इसका practical effect recruitment notification और implementation rules के अनुसार होगा, इसलिए apply करते समय SSC/MHA की latest notification जरूर पढ़ें.</p>
+<p>Reservation selection की guarantee नहीं है। Candidate को applicable eligibility, document verification, medical standards और recruitment process की बाकी conditions पूरी करनी होंगी.</p>${link(official.capf,'Official MHA/PIB 2026')}`)+
+    info('Ministry of Defence — 10%',`<p>Ministry of Defence ने Indian Coast Guard, eligible Defence Civilian posts और 16 Defence Public Sector Undertakings में requisite eligibility criteria पूरा करने वाले Agniveers के लिए <b>10% reservation</b> approve किए जाने की जानकारी दी थी.</p>
+<p>यह benefit हर post पर automatically लागू मानना सही नहीं होगा। Vacancy type, recruitment rules, qualification, age, experience और post-specific conditions अलग-अलग हो सकती हैं। इसलिए जिस organisation में vacancy निकले, उसकी official notification में Ex-Agniveer clause जरूर देखें.</p>
+<p>Defence civilian sector में technical, clerical, support और industrial roles जैसी अलग categories हो सकती हैं, इसलिए qualification के अनुसार opportunities अलग होंगी.</p>${link(official.defence,'Official MoD/PIB')}`)+
+    info('Indian Railways — 10% / 5%',`<p>Railway Board RBE 68/2023 के अनुसार चार वर्ष successfully complete करने वाले Agniveers के लिए open-market direct recruitment में <b>Level-1 posts पर 10%</b> और <b>Level-2 तथा above non-gazetted posts पर 5%</b> horizontal reservation का provision दिया गया है.</p>
+<p>Horizontal reservation का implementation category roster और recruitment rules के साथ होता है, इसलिए इसे केवल total vacancy percentage के रूप में समझना पर्याप्त नहीं है। RRB की current notification में eligibility, age relaxation, qualification, medical category और recruitment stage check करना जरूरी है.</p>
+<p>Railway jobs में technical और non-technical दोनों प्रकार की vacancies होती हैं। ITI/Diploma candidates के लिए कुछ technical posts अधिक relevant हो सकती हैं, जबकि 10th/12th/Graduate candidates के लिए अलग recruitment categories उपलब्ध हो सकती हैं.</p>${link(official.railway,'Official Railway Board Order')}`);
+  }
+  if(type==='jobs'){title='🔥 Latest Jobs & Official Portals';body=
+    info('Latest vacancy कैसे check करें?',`<p>AV FUTURE अभी static GitHub Pages website है। इसका मतलब है कि website की vacancy list अपने-आप government portals से live data नहीं खींचती। इसलिए expired या गलत vacancy दिखाने से बचने के लिए official portals को primary source रखा गया है.</p>
+<p>किसी भी नई vacancy में सबसे पहले notification PDF खोलें और <b>total posts, category-wise posts, qualification, age cut-off date, Ex-Agniveer benefit, application fee, exam pattern, physical/medical standard और last date</b> check करें.</p>
+<p>Vacancy देखकर केवल social-media thumbnail या short post पर भरोसा न करें। Official notification में corrigendum/update भी आ सकता है, इसलिए application के बाद भी portal check करते रहें.</p>`)+
+    info('SSC / CAPF / Assam Rifles',`${link(official.ssc,'SSC Official')}${link(official.capf,'Ex-Agniveer CAPF Policy')}`)+
+    info('Indian Army',`${link(official.army,'Join Indian Army')}`)+
+    info('Railways',`${link(official.rrb,'RRB Apply')}${link(official.railway,'Ex-Agniveer Railway Order')}`)+
+    info('All India Jobs',`${link(official.ncs,'National Career Service')}`);
+  }
+  if(type==='resettle'){title='♻️ Resettlement & Business';body=
+    info('DGR Self-Employment Schemes',`<p>Department of Ex-Servicemen Welfare की DGR self-employment list में ESM Coal Loading & Transportation, Oil Product Agency eligibility certificate, COCO outlet management, Mother Dairy/Safal shops, CNG station management, LPG distributorship, Petrol/Diesel Retail Outlet, Security Agency और Technical Services जैसी schemes listed हैं.</p>
+<p>इन schemes का उद्देश्य service के बाद self-employment और business opportunities को support करना है। हर scheme की eligibility, location, seniority/registration, investment requirement, sponsorship procedure और allotment process अलग हो सकता है.</p>
+<p><b>महत्वपूर्ण:</b> ये schemes सामान्य Ex-Servicemen framework की हैं। Ex-Agniveer को automatically eligible मानना सही नहीं है। Apply करने से पहले current DGR/DESW eligibility rules में specifically Ex-Agniveer eligibility verify करें.</p>${link(official.desw,'Official DESW/DGR')}`)+
+    info('Skill और Employment',`${link(official.skill,'Skill India')}${link(official.ncs,'National Career Service')}${link(official.mudra,'PM MUDRA')}`);
+  }
+  if(type==='livejobs'){title='🔴 Live Job Center';body=
+    info('Official Vacancy Hub',`<p><b>Latest vacancies</b> के लिए नीचे official portals खोलें। AV FUTURE किसी vacancy को “live” तभी मानने की सलाह देता है जब उसका current notification official portal पर उपलब्ध हो.</p><div class="searchrow"><input id="jobSearch" placeholder="Job keyword: SSC GD, Railway, Army..."><button class="action" onclick="jobSearchResult()">Search Guide</button></div><p class="note">यह version official portals को one-place access देता है। Fully automatic vacancy feed के लिए future backend/API integration चाहिए.</p>`)+
+    info('Central Government Portals',`${link(official.ssc,'SSC Current Notices')}${link(official.rrb,'RRB Apply')}${link(official.army,'Join Indian Army')}${link(official.ncs,'National Career Service')}`);
+  }
+  if(type==='bestjobs'){title='✨ Best Jobs For Me';body=
+    info('Personal Job Matcher',`<p>अपनी profile डालें। Tool qualification और preference के आधार पर relevant career routes दिखाएगा—final eligibility official notification तय करेगी.</p><label>Age</label><input id="bjAge" type="number"><label>Qualification</label><select id="bjQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>Preference</label><select id="bjPref"><option>Uniform / Security</option><option>Railway</option><option>Technical</option><option>Any Government Job</option><option>Business / Self Employment</option></select><button class="action" onclick="bestJobsResult()">मेरी Best Jobs दिखाएँ</button>`);
+  }
+  if(type==='alerts'){title='🔔 Job Alerts';body=
+    info('Alert Preferences',`<p>यह static version आपकी alert preference इसी device में save करेगा। Browser बंद होने पर background push notification भेजने के लिए PWA/backend notification service की जरूरत होगी.</p><label>Job Category</label><select id="alCat"><option>All Ex-Agniveer Jobs</option><option>SSC / CAPF</option><option>Railway</option><option>Army</option><option>State Jobs</option></select><label>State</label><input id="alState" placeholder="जैसे Uttar Pradesh"><button class="action" onclick="saveAlert()">Alert Preference Save करें</button><div id="alertSaved"></div>`);
+  }
+  if(type==='stateverify'){title='✅ Verified State Policies';body=
+    info('State Policy Verification',`<p>State-wise Ex-Agniveer reservation एक जैसी नहीं है। इसलिए AV FUTURE बिना official order के कोई percentage final नहीं दिखाता.</p><label>State</label><select id="vState"><option>Uttar Pradesh</option><option>Haryana</option><option>Delhi</option><option>Rajasthan</option><option>Bihar</option><option>Other</option></select><button class="action" onclick="verifiedStateResult()">Verification Guide खोलें</button><p class="note">Future version में official state order URL और verification date database से जोड़े जा सकते हैं.</p>`);
+  }
+  if(type==='future'){title='🎯 My Future Calculator';body=
+    info('अपनी details भरें',`<label>Age</label><input id="fAge" type="number" placeholder="जैसे 24"><label>Qualification</label><select id="fQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>Service Completion Year</label><input id="fYear" type="number" placeholder="2030"><button class="action" onclick="futureResult()">Detailed Result खोलें</button><p class="note">यह career guidance tool है, official eligibility decision नहीं.</p>`);
+  }
+  if(type==='score'){title='🏆 AV Future Score';body=
+    info('Readiness Score',`<p>यह score केवल preparation/readiness दिखाता है—selection probability नहीं। Age, qualification, physical readiness और technical skill के आधार पर guidance देता है.</p><label>Age</label><input id="sAge" type="number"><label>Qualification</label><select id="sQual"><option value="10">10th</option><option value="12">12th</option><option value="15">Graduate</option><option value="14">ITI / Diploma</option></select><label>Physical readiness (1–10)</label><input id="sFit" type="number" min="1" max="10" value="7"><label>Computer/Technical skill (1–10)</label><input id="sSkill" type="number" min="1" max="10" value="5"><button class="action" onclick="scoreResult()">Full Score Report खोलें</button>`);
+  }
+  if(type==='elig'){title='🔎 Job Eligibility Checker';body=
+    info('Eligibility guidance',`<label>Age</label><input id="eAge" type="number"><label>Qualification</label><select id="eQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>Job type</label><select id="eJob"><option>SSC GD / CAPF</option><option>Railway Level-1</option><option>Graduate Government Jobs</option><option>Technical Jobs</option></select><button class="action" onclick="eligResult()">Detailed Eligibility Report खोलें</button><p class="note">Exact age/education/category rules vacancy notification से ही final होंगे.</p>`);
+  }
+  if(type==='deadline'){title='⏰ Last Date Countdown';body=
+    info('Vacancy deadline',`<label>Vacancy Name</label><input id="dName" placeholder="जैसे SSC GD"><label>Official Last Date</label><input id="dDate" type="date"><button class="action" onclick="deadlineResult()">Countdown Interface खोलें</button>`);
+  }
+  if(type==='service'){title='⏳ Service Countdown';body=
+    info('4-year reference countdown',`<label>Joining Date</label><input id="jDate" type="date"><button class="action" onclick="serviceResult()">Full Service Timeline खोलें</button><p class="note">Actual release/extension/service dates official service records से verify करें.</p>`);
+  }
+  if(type==='seva'){title='💰 Seva Nidhi Calculator';body=
+    info('Original policy reference',`<p>Original policy में package और contribution year-wise fixed table के रूप में दिया गया है। नीचे calculator proportional educational view देता है; final settlement actual contribution, interest और official records पर निर्भर होगा.</p><label>Completed Years</label><select id="svYears"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option></select><button class="action" onclick="sevaResult()">Detailed Seva Nidhi View खोलें</button>${link(official.pibPolicy,'Official Policy')}`);
+  }
+  if(type==='salary'){title='💵 Salary Comparison';body=
+    info('Salary को सही तरीके से compare करें',`<p>CAPF, Railway और State Police में salary केवल एक fixed number नहीं होती। Government jobs में basic pay/pay level के साथ DA, HRA, transport allowance, risk/hardship allowance, posting-related benefits और deductions जुड़ सकते हैं। इसलिए gross salary और in-hand salary अलग होती है.</p>
+<p>Railway में pay level post के अनुसार बदलता है। State Police में salary state pay rules पर निर्भर करती है। Private security या technical jobs में salary company, city, shift, skill, experience और responsibility के अनुसार बदल सकती है.</p>
+<p>इसी कारण AV FUTURE बिना specific official vacancy के कोई single “final salary” नहीं दिखाता। जिस job को compare करना हो, उसकी current notification से basic pay और allowances verify करना सबसे सही तरीका है.</p>${link(official.ssc,'SSC')}${link(official.rrb,'RRB')}${link(official.ncs,'NCS')}`);
+  }
+  if(type==='saved'){title='⭐ My Saved Jobs';body=
+    info('Job save करें',`<label>Job Name</label><input id="saveName" placeholder="जैसे SSC GD 2027"><label>Official Link (optional)</label><input id="saveLink" placeholder="https://..."><button class="action" onclick="saveJob()">Save करके नया interface दिखाएँ</button><div id="savedList"></div>`);
+  }
+  if(type==='state'){title='📍 State Dashboard';body=
+    info('State चुनें',`<p>State-wise Ex-Agniveer policies अलग-अलग हो सकती हैं और समय के साथ बदल सकती हैं। गलत percentage दिखाने से बचने के लिए AV FUTURE official state recruitment notification को final मानता है.</p><select id="st"><option>Uttar Pradesh</option><option>Haryana</option><option>Delhi</option><option>Rajasthan</option><option>Bihar</option><option>Other</option></select><button class="action" onclick="stateResult()">State Career Interface खोलें</button>`);
+  }
+  if(type==='quiz'){title='📚 Exam Practice';body=
+    info('Mini Practice Test',`<p><b>Q1.</b> भारतीय संविधान कब लागू हुआ?</p><select id="q1"><option value="">Choose</option><option>15 Aug 1947</option><option>26 Jan 1950</option><option>26 Nov 1949</option></select><p><b>Q2.</b> 25 × 4 = ?</p><select id="q2"><option value="">Choose</option><option>80</option><option>100</option><option>120</option></select><p><b>Q3.</b> Victory का opposite?</p><select id="q3"><option value="">Choose</option><option>Defeat</option><option>Success</option><option>Win</option></select><button class="action" onclick="quizResult()">Result Interface खोलें</button>`);
+  }
+  if(type==='profile'){title='🔐 My AV Profile';body=
+    info('Profile इस device पर save करें',`<label>Name</label><input id="pName"><label>DOB</label><input id="pDob" type="date"><label>Qualification</label><select id="pQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>State</label><input id="pState"><label>Service Completion Year</label><input id="pYear" type="number"><button class="action" onclick="profileResult()">Save Profile & Open Summary</button><p class="note">Data केवल इस browser के localStorage में save होगी.</p>`);
+  }
+  if(type==='documents'){title='📄 Documents Checklist';body=
+    info('Career transition documents',`<p>Career transition के लिए commonly useful documents में Aadhaar, PAN, 10th/12th/ITI/Diploma/Graduation certificates, domicile/category certificate जहाँ लागू हो, service/discharge related documents, skill certificates, passport-size photographs, signature scan, active mobile number, email ID और bank details शामिल हो सकते हैं.</p>
+<p>इनके अलावा कई recruitments में character certificate, NOC, experience certificate, EWS/OBC-NCL certificate, caste certificate, medical certificate या specific format declaration भी मांगा जा सकता है.</p>
+<p>हर recruitment की exact document list अलग हो सकती है, इसलिए application submit करने से पहले official notification की “Documents Required” और “Document Verification” section जरूर पढ़ें.</p>`)+
+    info('Digital Folder बनाएं',`<p>Documents की clear PDF/JPG copies रखें और filenames simple रखें, जैसे Aadhaar.pdf, 10th.pdf, Diploma.pdf. Sensitive documents public GitHub repository में upload न करें.</p>`);
+  }
+  if(type==='physical'){title='🏃 Physical & Exam Guide';body=
+    info('Physical Standards',`<p>CAPF, Police और RPF जैसी recruitments में height, chest, running, long jump/high jump, medical standards, vision और category/regional relaxations अलग-अलग हो सकते हैं। इसलिए पुराने standards को current भर्ती पर automatically लागू न करें.</p>
+<p>Ex-Agniveer CAPF/Assam Rifles 2026 policy update में PST/PET और written examination exemption stated है, लेकिन practical implementation recruitment notification पर निर्भर करेगी। Candidate को document verification, medical और अन्य prescribed conditions फिर भी पूरी करनी पड़ सकती हैं.</p>
+<p>Physical preparation में running endurance, bodyweight strength, mobility, recovery और injury prevention पर ध्यान देना useful है। Overtraining से बचें और test format official notice से confirm करें.</p>${link(official.capf,'Official CAPF Ex-Agniveer Policy')}`)+
+    info('Exam Preparation',`<p>SSC GD जैसे exams में current notice के syllabus को आधार बनाएं। सामान्य तैयारी में reasoning, mathematics, general awareness और language practice useful रहती है। Mock tests के साथ गलत प्रश्नों की अलग notebook रखें.</p>${link(official.ssc,'SSC Official')}`);
+  }
+  document.getElementById('fsTitle').innerHTML=title; b.innerHTML=body; fs.style.display='block'; document.body.style.overflow='hidden'; window.scrollTo(0,0);
+  if(type==='saved') renderSaved();
+}
+function jobSearchResult(){let k=(document.getElementById('jobSearch')?.value||'').trim();showResult('🔴 Official Job Search',`<h2>${k||'All Jobs'}</h2><p>Current vacancy verify करने के लिए SSC, RRB, Join Indian Army और NCS official portals खोलें। Notification PDF में last date, qualification, age cut-off और Ex-Agniveer clause जरूर check करें.</p>`)}
+function bestJobsResult(){let a=+bjAge.value,q=bjQual.value,p=bjPref.value;if(!a)return showResult('✨ Best Jobs For Me','Age भरें।');let x=[];if(p.includes('Uniform')||p.includes('Any'))x.push('SSC/CAPF/Assam Rifles route — current Ex-Agniveer notification verify करें.');if(p.includes('Railway')||p.includes('Any'))x.push('Railway Level-1 / Level-2+ — qualification और current RRB notice check करें.');if(q==='ITI / Diploma'||p.includes('Technical'))x.push('Technical/industrial/railway skill-based posts आपकी profile से relevant हो सकते हैं.');if(q==='Graduate')x.push('Graduate-level SSC और state recruitments भी track करें.');if(p.includes('Business'))x.push('DGR/DESW eligibility verify करके self-employment schemes, Skill India और MUDRA explore करें.');showResult('✨ Your Career Matches',`<h2>${a} वर्ष • ${q}</h2><p>${x.map(v=>'• '+v).join('<br>')||'Multiple government-job routes explore करें.'}</p><p><b>Next:</b> official vacancy आते ही exact eligibility checker use करें.</p>`)}
+function saveAlert(){let d={cat:alCat.value,state:alState.value};localStorage.setItem('avalerts',JSON.stringify(d));showResult('🔔 Alert Preference Saved',`<h2>${d.cat}</h2><p>State: ${d.state||'All India'}</p><p>Preference इस browser में save है। Automatic background alerts के लिए future notification backend/PWA integration आवश्यक है.</p>`)}
+function verifiedStateResult(){showResult('✅ State Policy Verification',`<h2>${vState.value}</h2><p>Police, Prison/Jail, Fire, Forest, Home Guard और अन्य state recruitments में Ex-Agniveer benefit केवल current official government order/notification से confirm करें.</p><p>AV FUTURE verified order के बिना reservation percentage invent नहीं करेगा.</p>`)}
+function closePage(){document.getElementById('fs').style.display='none';document.body.style.overflow='auto'}
+function showResult(title,html){document.getElementById('fsTitle').innerHTML=title;document.getElementById('fsBody').innerHTML=`<div class="info"><div class="resultbox">${html}</div></div><div class="info"><h3>Official verification</h3><p>यह result guidance के लिए है। Apply करने से पहले संबंधित official notification में age, qualification, category, physical/medical और closing date verify करें.</p>${link(official.ssc,'SSC')}${link(official.army,'Join Indian Army')}${link(official.rrb,'RRB')}</div>`}
+function futureResult(){let a=+fAge.value,q=fQual.value,y=fYear.value;if(!a)return showResult('🎯 My Future Report','Age भरें।');let paths=[];paths.push('CAPF/Assam Rifles की Ex-Agniveer recruitment policy और current SSC notification देखें.');paths.push('Railways के Level-1/Level-2+ अवसरों में current RRB notification check करें.');if(q==='Graduate')paths.push('Graduate-level SSC/State recruitment भी explore करें.');if(q==='ITI / Diploma')paths.push('Technical, railway और industrial roles relevant हो सकते हैं.');paths.push('Skill India/NCS तथा verified resettlement schemes को parallel plan में रखें.');showResult('🎯 My Future — Detailed Report',`<h2>${a} वर्ष • ${q} • Completion ${y||'Not set'}</h2><p>${paths.map(x=>'• '+x).join('<br>')}</p><p><b>Recommended strategy:</b> service completion से पहले documents, skill certification और official recruitment calendar track करें.</p>`)}
+function scoreResult(){let a=+sAge.value,q=+sQual.value,f=+sFit.value,k=+sSkill.value;if(!a)return showResult('🏆 AV Future Score','Age भरें।');let sc=Math.min(100,35+q+f*2+k*2+(a<=30?12:6));let band=sc>=80?'Strong readiness':sc>=60?'Good readiness':'Preparation needed';showResult('🏆 AV Future Score Report',`<h2>${sc}/100 — ${band}</h2><p>This is a preparation score, not selection probability.</p><p><b>Improve:</b> official exam syllabus, physical fitness, computer/technical certification और document readiness पर काम करें.</p>`)}
+function eligResult(){let a=+eAge.value,q=eQual.value,j=eJob.value;if(!a)return showResult('🔎 Eligibility Report','Age भरें।');showResult('🔎 Eligibility Report',`<h2>${j}</h2><p><b>Age:</b> ${a} &nbsp; <b>Qualification:</b> ${q}</p><p>AV FUTURE बिना current vacancy notification के “Eligible” का final claim नहीं करेगा। Ex-Agniveer age relaxation/reservation जहाँ notified है वहाँ लाभ हो सकता है, पर exact cut-off date, educational requirement, category and medical/physical rules current notice से check होंगे.</p>`)}
+function deadlineResult(){if(!dDate.value)return showResult('⏰ Countdown','Last date डालें।');let e=new Date(dDate.value+'T00:00:00'),n=new Date();n.setHours(0,0,0,0);let d=Math.ceil((e-n)/86400000);showResult('⏰ Vacancy Countdown',`<h2>${dName.value||'Vacancy'}</h2><p>${d<0?'Last date निकल चुकी है.':d===0?'आज last date है.':`<b>${d} दिन बाकी हैं.</b>`}</p><p>Application को अंतिम दिन तक न छोड़ें और date official notice से verify करें.</p>`)}
+function serviceResult(){if(!jDate.value)return showResult('⏳ Service Timeline','Joining date डालें।');let st=new Date(jDate.value),en=new Date(st);en.setFullYear(en.getFullYear()+4);let n=new Date(),d=Math.ceil((en-n)/86400000);showResult('⏳ Service Timeline',`<h2>4-year reference completion: ${en.toLocaleDateString('en-IN')}</h2><p>${d>0?`Approx ${d} days remaining.`:'Reference four-year period reached/passed.'}</p><p>Actual service completion official records/orders से verify करें.</p>`)}
+function sevaResult(){let y=+svYears.value;let val=11.71*(y/4);showResult('💰 Seva Nidhi Detailed View',`<h2>${y} year proportional educational estimate: ₹${val.toFixed(2)} lakh</h2><p>यह simple proportion है, official settlement calculation नहीं। Original policy में contributions year-wise package के 30% और matching Government contribution के साथ, applicable interest के आधार पर बनते हैं. Full four-year original reference ≈ ₹11.71 lakh.</p>`)}
+function quizResult(){let s=0;if(q1.value==='26 Jan 1950')s++;if(q2.value==='100')s++;if(q3.value==='Defeat')s++;showResult('📚 Quiz Result',`<h2>Score: ${s}/3</h2><p>${s===3?'Excellent.':s===2?'Good.':'Practice more.'}</p><p>Q1 correct: 26 January 1950<br>Q2 correct: 100<br>Q3 correct: Defeat</p>`)}
+function saveJob(){let n=saveName.value.trim(),u=saveLink.value.trim();if(!n)return;let a=JSON.parse(localStorage.getItem('avjobs')||'[]');a.push({n,u});localStorage.setItem('avjobs',JSON.stringify(a));showResult('⭐ Job Saved',`<h2>${n}</h2><p>यह job इस device/browser में save हो गई है.</p><button class="action" onclick="openPage('saved')">Saved Jobs खोलें</button>`)}
+function renderSaved(){let a=JSON.parse(localStorage.getItem('avjobs')||'[]');let el=document.getElementById('savedList');if(!el)return;el.innerHTML='<div class="resultbox">'+(a.length?a.map((x,i)=>`⭐ <b>${x.n}</b> ${x.u?`<a href="${x.u}" target="_blank">Official/Stored link</a>`:''}<br><button class="action" onclick="removeSaved(${i})">Remove</button>`).join('<hr>'):'अभी कोई saved job नहीं है.')+'</div>'}
+function removeSaved(i){let a=JSON.parse(localStorage.getItem('avjobs')||'[]');a.splice(i,1);localStorage.setItem('avjobs',JSON.stringify(a));renderSaved()}
+function stateResult(){showResult('📍 State Career Dashboard',`<h2>${st.value}</h2><p>इस state के लिए Police, Prison/Jail, Fire, Forest, Home Guard और अन्य state recruitment portals/checks देखें। Ex-Agniveer reservation/relaxation केवल current official state order/notification के अनुसार मानें.</p><p>AV FUTURE unverified social-media percentages को official policy के रूप में नहीं दिखाएगा.</p>`)}
+function profileResult(){let d={name:pName.value,dob:pDob.value,qual:pQual.value,state:pState.value,year:pYear.value};localStorage.setItem('avprofile',JSON.stringify(d));showResult('🔐 My AV Profile Saved',`<h2>${d.name||'AV User'}</h2><p>DOB: ${d.dob||'-'}<br>Qualification: ${d.qual}<br>State: ${d.state||'-'}<br>Service completion year: ${d.year||'-'}</p><p>यह data केवल इस browser/device में stored है.</p>`)}
+</script>
+</body>
+</html>
