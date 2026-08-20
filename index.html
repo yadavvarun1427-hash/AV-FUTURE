@@ -13,7 +13,31 @@ header{background:#10233f;color:#fff;padding:22px 15px;text-align:center}
 .policy-row{padding:12px 0;border-bottom:1px solid #e5e7eb}.policy-row:last-child{border:0}
 .notice{background:#fff8df;border-radius:12px;padding:12px}.muted{color:#687386;font-size:13px}
 footer{text-align:center;padding:28px 15px;color:#687386}
-</style></head>
+</style>
+<style>
+.resettle-main-btn{display:block;text-align:center;background:#166534;color:#fff;text-decoration:none;
+padding:15px 16px;border-radius:12px;font-weight:800;font-size:18px;margin:14px 0}
+</style>
+
+<style>
+.chart-card{background:#fff;border-radius:16px;padding:18px;margin:14px 0;box-shadow:0 4px 16px #00000010}
+.chart-row{display:grid;grid-template-columns:140px 1fr 52px;gap:10px;align-items:center;margin:12px 0}
+.chart-label{font-weight:700;font-size:14px}
+.chart-track{height:22px;background:#e8edf3;border-radius:999px;overflow:hidden}
+.chart-bar{height:100%;background:#1f4b7a;border-radius:999px}
+.chart-value{font-weight:800;text-align:right}
+@media(max-width:560px){
+  .chart-row{grid-template-columns:100px 1fr 45px}
+  .chart-label{font-size:12px}
+}
+</style>
+
+<style>
+.jobs-main-btn{display:block;text-align:center;background:#7c2d12;color:#fff;text-decoration:none;padding:15px 16px;border-radius:12px;font-weight:800;font-size:18px;margin:14px 0}
+.job-item{border-bottom:1px solid #e5e7eb;padding:14px 0}.job-item:last-child{border:0}
+.job-status{display:inline-block;padding:5px 9px;border-radius:999px;background:#eef2f7;font-size:12px;font-weight:700}
+</style>
+</head>
 <body>
 <header><h1>AV FUTURE</h1><div>Agniveer Policy • Reservation • Official Sources</div></header>
 <div class="wrap">
@@ -30,6 +54,9 @@ footer{text-align:center;padding:28px 15px;color:#687386}
 <div class="policy-row"><b>सेवा पूरी होने के बाद:</b> अग्निवीरों को कौशल प्रमाणपत्र दिया जाता है और केंद्र/राज्य की विभिन्न भर्तियों में घोषित आरक्षण या आयु-छूट लागू हो सकती है।</div>
 <a class="btn" href="https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1833765&lang=2&reg=48" target="_blank">अग्निपथ की आधिकारिक सरकारी नीति ↗</a>
 </section>
+<a class="resettle-main-btn" href="#resettlement">♻️ RESETTLEMENT / पुनर्वास योजनाएँ खोलें</a>
+<a class="jobs-main-btn" href="#latest-jobs">🔥 NEW LATEST JOBS / नई भर्तियाँ देखें</a>
+<a class="resettle-main-btn" href="https://www.joinindianarmy.nic.in/" target="_blank" rel="noopener">🪖 JOIN INDIAN ARMY — Official Website</a>
 
 <section class="card"><h2>Reservation + Official Website</h2><div class="grid">
 <div>
@@ -54,6 +81,39 @@ footer{text-align:center;padding:28px 15px;color:#687386}
 </div>
 </div></section>
 
+
+<section class="chart-card" id="civil-support-graph">
+<h2>📊 Civil Career Support Graph</h2>
+<p>यह graph दिखाता है कि Ex-Agniveer को अलग-अलग civil/government recruitment में घोषित reservation से कितना advantage मिल सकता है।</p>
+
+<div class="chart-row">
+  <div class="chart-label">CAPF / Assam Rifles</div>
+  <div class="chart-track"><div class="chart-bar" style="width:100%"></div></div>
+  <div class="chart-value">50%</div>
+</div>
+
+<div class="chart-row">
+  <div class="chart-label">Defence Civilian / DPSU / Coast Guard</div>
+  <div class="chart-track"><div class="chart-bar" style="width:20%"></div></div>
+  <div class="chart-value">10%</div>
+</div>
+
+<div class="chart-row">
+  <div class="chart-label">Railway Level-1</div>
+  <div class="chart-track"><div class="chart-bar" style="width:20%"></div></div>
+  <div class="chart-value">10%</div>
+</div>
+
+<div class="chart-row">
+  <div class="chart-label">Railway Level-2+</div>
+  <div class="chart-track"><div class="chart-bar" style="width:10%"></div></div>
+  <div class="chart-value">5%</div>
+</div>
+
+<p class="muted"><b>सबसे बड़ा current advantage:</b> CAPF/Assam Rifles में 50% reservation. यह graph केवल reservation percentage दिखाता है; final selection eligibility, vacancy, merit और recruitment rules पर निर्भर करेगा.</p>
+<a class="btn" href="#resettlement">पुनर्वास / Resettlement Options देखें ↓</a>
+</section>
+
 <section class="card">
 <h2>Latest Official Update</h2>
 <p><b>21 July 2026:</b> Ministry of Home Affairs ने बताया कि CAPFs और Assam Rifles में Constable (GD)/Rifleman recruitment के लिए Ex-Agniveers की नई category में <b>50% vacancies reserved</b> हैं.</p>
@@ -65,5 +125,41 @@ footer{text-align:center;padding:28px 15px;color:#687386}
 <b>महत्वपूर्ण:</b> “Up to 25% regular cadre” और civil-job reservation अलग बातें हैं। किसी भर्ती में final eligibility, vacancy calculation, category adjustment और selection process के लिए उसी recruitment की official notification final मानी जाएगी।
 </section>
 
-</div><footer>AV FUTURE • Official-source based information for Agniveers</footer>
+</div>
+<section class="card" id="latest-jobs">
+<h2>🔥 New Latest Jobs / नई भर्तियाँ</h2>
+<p>यहाँ Agniveer/Ex-Agniveer के लिए उपयोगी सरकारी भर्ती और आने वाली vacancies के official links दिए गए हैं।</p>
+
+<div class="job-item">
+<span class="job-status">Upcoming</span>
+<h3>SSC Constable GD 2027 — CAPFs / Assam Rifles</h3>
+<p>SSC के 2026–27 calendar के अनुसार advertisement September 2026 और closing October 2026 प्रस्तावित है। Ex-Agniveer category के लिए CAPF/AR Constable GD/Rifleman vacancies में 50% reservation policy घोषित है।</p>
+<a class="btn" href="https://ssc.gov.in/" target="_blank" rel="noopener">SSC Official Website ↗</a>
+</div>
+
+<div class="job-item">
+<span class="job-status">Army Recruitment Process</span>
+<h3>Indian Army — Agniveer / Other Categories</h3>
+<p>2026 CEE के बाद अलग-अलग recruitment rallies चल/निर्धारित हैं। Agniveer GD, Technical, Office Assistant/SKT, Tradesman और Women Military Police सहित categories के official updates Army portal पर देखें।</p>
+<a class="btn" href="https://www.joinindianarmy.nic.in/" target="_blank" rel="noopener">Join Indian Army ↗</a>
+</div>
+
+<div class="job-item">
+<span class="job-status">Career Opportunity</span>
+<h3>Indian Railways — Ex-Agniveer Opportunities</h3>
+<p>Railways और Army ने 2026 में post-retirement career opportunities के लिए cooperation framework घोषित किया है। नई RRB vacancies के लिए official recruitment portals check करें।</p>
+<a class="btn" href="https://www.rrbapply.gov.in/" target="_blank" rel="noopener">RRB Apply Official ↗</a>
+</div>
+
+<div class="job-item">
+<span class="job-status">Official Job Portal</span>
+<h3>National Career Service — Government & Private Jobs</h3>
+<p>नई vacancies खोजने और job alerts के लिए Government of India का National Career Service portal.</p>
+<a class="btn" href="https://www.ncs.gov.in/" target="_blank" rel="noopener">NCS Official Jobs ↗</a>
+</div>
+
+<p class="muted"><b>Last checked: 20 August 2026.</b> यह static website है; नई vacancy अपने-आप नहीं जुड़ेगी। नई official vacancy आने पर इस section को update करना होगा।</p>
+</section>
+
+<footer>AV FUTURE • Official-source based information for Agniveers</footer>
 </body></html>
