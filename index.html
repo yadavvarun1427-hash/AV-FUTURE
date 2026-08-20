@@ -2,217 +2,159 @@
 <html lang="hi">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#07192d">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="AV FUTURE">
-<link rel="manifest" href="manifest.json">
-<link rel="apple-touch-icon" href="av-future-logo.png">
-<title>AV FUTURE NEXT</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1f35">
+<title>AV FUTURE</title>
 <style>
-:root{
- --bg:#f3f6fb;--card:#fff;--ink:#0f1f33;--muted:#697588;--line:#e2e8f0;
- --navy:#07192d;--blue:#1765c1;--green:#177249;--orange:#c95d19;--purple:#6a3bb1;
- --shadow:0 12px 36px rgba(7,25,45,.12)
-}
-*{box-sizing:border-box} html{scroll-behavior:smooth}
-body{margin:0;font-family:Arial,Helvetica,sans-serif;background:linear-gradient(180deg,#eaf2ff 0%,#f7f9fc 42%,#eef7f2 100%);color:var(--ink);padding-bottom:84px}
-header{padding:calc(22px + env(safe-area-inset-top)) 16px 22px;background:linear-gradient(135deg,#07192d,#12436f);color:#fff}
-.top{max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.brand{display:flex;gap:12px;align-items:center}.logo{width:64px;height:64px;border-radius:50%;background:#07120b;border:1px solid #d8b13f;display:grid;place-items:center;overflow:hidden}.logo img{width:100%;height:100%;object-fit:cover;display:block}
-h1{font-size:28px;margin:0}.tagline{opacity:.9;margin-top:4px;font-size:13px}
-.install{width:auto;border:0;border-radius:12px;padding:10px 12px;background:#ffffff18;color:#fff;font-weight:800}
-.wrap{max-width:1100px;margin:auto;padding:15px}
-.hero{background:linear-gradient(135deg,#0c2d4f,#1765c1);color:#fff;border-radius:22px;padding:20px;box-shadow:var(--shadow);margin-top:12px}
-.hero h2{margin:0 0 8px;font-size:24px}.hero p{margin:0;line-height:1.5;opacity:.95}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
-.stat{background:#ffffff13;border:1px solid #ffffff23;border-radius:14px;padding:12px;text-align:center}.stat b{font-size:22px;display:block}
-.quick{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
-.quick button,.tile{border:0;border-radius:16px;padding:14px 10px;color:white;font-weight:800;box-shadow:var(--shadow);cursor:pointer}
-.q1{background:linear-gradient(135deg,#177249,#23965e)}.q2{background:linear-gradient(135deg,#c95d19,#e9782b)}.q3{background:linear-gradient(135deg,#1765c1,#3a7ed0)}.q4{background:linear-gradient(135deg,#6a3bb1,#8a56d0)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:18px;margin-top:14px;box-shadow:var(--shadow)}
-.card h3{margin:0 0 12px;font-size:21px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:11px}
-.mini{background:#fbfdff;border:1px solid var(--line);border-radius:15px;padding:14px}
-.mini b{display:block;margin-bottom:4px}.big{font-size:28px;font-weight:900}
-.btn{display:inline-block;text-decoration:none;background:var(--navy);color:#fff;padding:10px 12px;border-radius:11px;font-weight:800;font-size:14px;margin:6px 5px 0 0}
-.btn.green{background:var(--green)}.btn.blue{background:var(--blue)}
-label{display:block;margin-top:9px;font-size:13px;font-weight:800}
-input,select,textarea,.action{width:100%;padding:12px;border:1px solid #cbd5e1;border-radius:11px;margin-top:6px;font-size:15px;background:#fff}
-.action{border:0;background:var(--navy);color:#fff;font-weight:900;cursor:pointer}
-.result{margin-top:12px;padding:14px;border-radius:13px;background:#eff6ff;border:1px solid #d7e8ff;line-height:1.55}
-.note{font-size:12px;color:var(--muted);line-height:1.45}
-.bar{display:grid;grid-template-columns:135px 1fr 48px;gap:9px;align-items:center;margin:10px 0}
-.track{height:18px;background:#e8edf4;border-radius:999px;overflow:hidden}.fill{height:100%;background:linear-gradient(90deg,#1765c1,#22a06b)}
-.bottom{position:fixed;left:0;right:0;bottom:0;background:#ffffffee;backdrop-filter:blur(16px);border-top:1px solid #dde5ef;display:grid;grid-template-columns:repeat(5,1fr);z-index:40;padding-bottom:env(safe-area-inset-bottom)}
-.bottom button{border:0;background:transparent;padding:10px 4px;color:#435066;font-size:11px;font-weight:800}.bottom span{display:block;font-size:20px;margin-bottom:3px}
-.sheet{position:fixed;inset:0;background:#f5f8fc;display:none;z-index:60;overflow-y:auto}
-.sheetHead{position:sticky;top:0;background:linear-gradient(135deg,#07192d,#12436f);color:white;padding:calc(12px + env(safe-area-inset-top)) 14px 12px;display:flex;align-items:center;gap:10px;z-index:2}
-.back{width:auto;border:0;border-radius:10px;background:#ffffff18;color:white;padding:9px 12px;font-weight:900}
-.sheetTitle{font-size:19px;font-weight:900}.sheetBody{max-width:850px;margin:auto;padding:16px 15px 36px}
-.info{background:white;border:1px solid var(--line);border-radius:17px;padding:17px;margin:12px 0;box-shadow:0 7px 24px #07192d10;line-height:1.6}
-.info h2,.info h3{margin-top:0}
-.badge{display:inline-block;padding:5px 9px;border-radius:999px;background:#edf2f7;font-size:12px;font-weight:800}
-.alert{background:#fff7ed;border:1px solid #fed7aa;border-radius:13px;padding:13px}
-@media(max-width:720px){.stats,.quick{grid-template-columns:1fr 1fr}.bar{grid-template-columns:95px 1fr 42px;font-size:12px}}
+:root{--navy:#0d1f35;--blue:#2563eb;--green:#15803d;--orange:#ea580c;--purple:#7c3aed;--bg:#f4f7fb;--card:#fff;--line:#e5eaf2;--muted:#64748b}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:linear-gradient(180deg,#eef4ff,#f8fafc,#eef6f1);color:#142033;padding-bottom:78px}
+header{background:linear-gradient(135deg,#0d1f35,#153f6c);color:#fff;padding:26px 16px;text-align:center}
+h1{margin:0}.wrap{max-width:1050px;margin:auto;padding:14px}
+.alert{background:#fff7ed;border-left:5px solid var(--orange);padding:12px;border-radius:10px;margin:12px 0;font-weight:700}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;margin-top:14px;box-shadow:0 8px 26px #0f172a12}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.mini{background:#fbfdff;border:1px solid var(--line);border-radius:14px;padding:14px}
+.btn,button{display:inline-block;background:var(--navy);color:#fff;text-decoration:none;border:0;padding:10px 12px;border-radius:10px;font-weight:800;margin-top:8px}
+input,select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:10px;margin-top:6px}
+.result{margin-top:10px;background:#f3f7fb;padding:12px;border-radius:12px}
+.score{font-size:38px;font-weight:900;color:var(--green)}
+.bar{height:18px;background:#e8edf4;border-radius:999px;overflow:hidden;margin:8px 0}.fill{height:100%;background:linear-gradient(90deg,#2563eb,#22c55e)}
+.job{padding:12px 0;border-bottom:1px solid var(--line)}.saved{background:#ecfdf5;padding:10px;border-radius:10px;margin-top:8px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(5,1fr);padding:8px 4px;z-index:10}
+.bottom a{text-align:center;text-decoration:none;color:#334155;font-size:11px;font-weight:700}
+
+.av-logo-img{width:92px;height:92px;object-fit:contain;display:block;margin:0 auto 10px;border-radius:50%;filter:drop-shadow(0 8px 14px rgba(0,0,0,.28))}
 </style>
 </head>
 <body>
 <header>
- <div class="top">
-  <div class="brand"><div class="logo"><img src="av-future-logo.png" alt="AV FUTURE Logo"></div><div><h1>AV FUTURE NEXT</h1><div class="tagline">Agniveer Career • Jobs • Policy • Resettlement</div></div></div>
-  <button class="install" id="installBtn">Install App</button>
- </div>
+  <img class="av-logo-img" src="av-future-logo.png" alt="AV FUTURE Logo">
+  <h1>AV FUTURE</h1>
+  <div>Agniveer Career Companion</div>
 </header>
 
-<main class="wrap">
-<section class="hero">
- <h2>एक Agniveer के लिए पूरा Career Dashboard</h2>
- <p>Policy, reservation, jobs, calculators, documents, preparation, profile और resettlement — सब एक app-style interface में.</p>
- <div class="stats">
-  <div class="stat"><b>4 वर्ष</b><span>Service</span></div>
-  <div class="stat"><b>25%</b><span>Up to Regular</span></div>
-  <div class="stat"><b>50%</b><span>CAPF/AR quota*</span></div>
-  <div class="stat"><b>₹48L</b><span>Insurance*</span></div>
- </div>
-</section>
+<div class="wrap">
+<div class="alert">🔔 Important Alerts: नई भर्ती, last date और official updates के लिए नीचे Latest Jobs section देखें।</div>
 
-<div class="quick">
- <button class="q1" onclick="openSheet('army')">🪖 Join Army</button>
- <button class="q2" onclick="openSheet('jobs')">🔥 Latest Jobs</button>
- <button class="q3" onclick="openSheet('future')">🎯 My Future</button>
- <button class="q4" onclick="openSheet('resettle')">♻️ Resettlement</button>
+<section class="card">
+<h2>🏆 AV Future Score</h2>
+<div class="grid">
+<div>
+<label>Age</label><input id="age" type="number" value="24">
+<label>Qualification</label>
+<select id="q"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select>
+<label>Physical Fitness (0-10)</label><input id="fit" type="number" value="8" min="0" max="10">
+<button onclick="score()">Score Calculate</button>
 </div>
-
-<section class="card">
- <h3>📊 Civil Career Snapshot</h3>
- <div class="bar"><b>CAPF / AR</b><div class="track"><div class="fill" style="width:100%"></div></div><b>50%</b></div>
- <div class="bar"><b>Defence</b><div class="track"><div class="fill" style="width:20%"></div></div><b>10%</b></div>
- <div class="bar"><b>Railway L1</b><div class="track"><div class="fill" style="width:20%"></div></div><b>10%</b></div>
- <div class="bar"><b>Railway L2+</b><div class="track"><div class="fill" style="width:10%"></div></div><b>5%</b></div>
- <button class="action" onclick="openSheet('reservation')">पूरी Reservation जानकारी खोलें</button>
+<div class="result" id="scoreOut">Details भरें।</div>
+</div>
 </section>
 
 <section class="card">
- <h3>🚀 PRO Tools</h3>
- <div class="grid">
-  <button class="tile q3" onclick="openSheet('score')">🏆 Future Score</button>
-  <button class="tile q3" onclick="openSheet('eligibility')">🔎 Eligibility</button>
-  <button class="tile q3" onclick="openSheet('countdown')">⏰ Last Date</button>
-  <button class="tile q3" onclick="openSheet('service')">⏳ Service Countdown</button>
-  <button class="tile q3" onclick="openSheet('seva')">💰 Seva Nidhi</button>
-  <button class="tile q3" onclick="openSheet('salary')">💵 Salary Compare</button>
-  <button class="tile q3" onclick="openSheet('documents')">📄 Documents</button>
-  <button class="tile q3" onclick="openSheet('quiz')">📚 Practice Quiz</button>
-  <button class="tile q3" onclick="openSheet('profile')">🔐 My AV Profile</button>
-  <button class="tile q3" onclick="openSheet('saved')">⭐ Saved Jobs</button>
- </div>
+<h2>🔎 Job Eligibility Checker</h2>
+<select id="jobSel">
+<option value="capf">CAPF / Assam Rifles</option>
+<option value="rail">Railway</option>
+<option value="army">Army</option>
+</select>
+<input id="jobAge" type="number" placeholder="Age">
+<button onclick="elig()">Check</button>
+<div class="result" id="eligOut"></div>
 </section>
 
 <section class="card">
- <h3>📘 अग्निवीर Quick Policy</h3>
- <div class="grid">
-  <div class="mini"><b>Service</b><div class="big">4 वर्ष</div></div>
-  <div class="mini"><b>Regular Cadre</b><div class="big">Up to 25%</div></div>
-  <div class="mini"><b>Seva Nidhi</b><div class="big">≈ ₹11.71L*</div></div>
-  <div class="mini"><b>Insurance</b><div class="big">₹48L*</div></div>
- </div>
- <button class="action" onclick="openSheet('policy')">पूरी Policy खोलें</button>
+<h2>⭐ Saved Jobs</h2>
+<div id="savedJobs">कोई job save नहीं है।</div>
 </section>
-<p class="note">*Official policy references/notifications apply. Current recruitment notification is final.</p>
-</main>
+
+<section class="card" id="latest">
+<h2>🔥 Latest Jobs + Last Date Countdown</h2>
+<div class="job"><b>SSC GD / CAPF</b><br>Official portal<br><button onclick="saveJob('SSC GD / CAPF')">Save Job</button><a class="btn" href="https://ssc.gov.in/" target="_blank">Official</a></div>
+<div class="job"><b>Indian Army</b><br>Recruitment updates<br><button onclick="saveJob('Indian Army')">Save Job</button><a class="btn" href="https://www.joinindianarmy.nic.in/" target="_blank">Official</a></div>
+<div class="job"><b>Railway</b><br>RRB vacancies<br><button onclick="saveJob('Railway')">Save Job</button><a class="btn" href="https://www.rrbapply.gov.in/" target="_blank">Official</a></div>
+</section>
+
+<section class="card">
+<h2>💵 Salary Comparison</h2>
+<div class="grid">
+<div class="mini"><b>CAPF</b><p>Pay level और allowances official notice के अनुसार.</p></div>
+<div class="mini"><b>State Police</b><p>State-wise pay varies.</p></div>
+<div class="mini"><b>Railway</b><p>Post और pay level के अनुसार.</p></div>
+<div class="mini"><b>Private Security</b><p>Company/location based.</p></div>
+</div>
+</section>
+
+<section class="card">
+<h2>🧭 Career Roadmap</h2>
+<ul>
+<li>24-18 months before completion: Documents और skills तैयार करें.</li>
+<li>18-12 months: Exams और physical preparation शुरू करें.</li>
+<li>12-6 months: Applications और mock tests.</li>
+<li>Last 6 months: Vacancies, interviews और business planning.</li>
+</ul>
+</section>
+
+<section class="card">
+<h2>📍 State Dashboard</h2>
+<select id="state">
+<option>Uttar Pradesh</option><option>Haryana</option><option>Bihar</option><option>Delhi</option><option>Rajasthan</option>
+</select>
+<div class="result">अपने state की Police, Jail, Fire, Forest और other recruitment notifications official portals से check करें.</div>
+</section>
+
+<section class="card">
+<h2>📱 Install as App</h2>
+<p>iPhone: Safari → Share → Add to Home Screen.</p>
+<p>Android: Chrome → Menu → Add to Home Screen.</p>
+</section>
+
+<section class="card">
+<h2>🔐 My AV Profile</h2>
+<input id="profile" placeholder="अपना नाम / profile note">
+<button onclick="saveProfile()">Save Profile</button>
+<div class="result" id="profileOut"></div>
+</section>
+
+</div>
 
 <nav class="bottom">
- <button onclick="window.scrollTo({top:0,behavior:'smooth'})"><span>🏠</span>Home</button>
- <button onclick="openSheet('jobs')"><span>🔥</span>Jobs</button>
- <button onclick="openSheet('future')"><span>🎯</span>Future</button>
- <button onclick="openSheet('resettle')"><span>♻️</span>Business</button>
- <button onclick="openSheet('profile')"><span>👤</span>Profile</button>
+<a href="#">🏠<br>Home</a>
+<a href="#latest">🔥<br>Jobs</a>
+<a href="#">📊<br>Score</a>
+<a href="#">♻️<br>Career</a>
+<a href="#">👤<br>Profile</a>
 </nav>
 
-<div id="sheet" class="sheet">
- <div class="sheetHead"><button class="back" onclick="closeSheet()">← Back</button><div class="sheetTitle" id="sheetTitle">AV FUTURE</div></div>
- <div class="sheetBody" id="sheetBody"></div>
-</div>
-
 <script>
-const O={
-army:'https://www.joinindianarmy.nic.in/',
-pibPolicy:'https://www.pib.gov.in/PressReleasePage.aspx?PRID=1834227&lang=1&reg=1',
-capf:'https://www.pib.gov.in/PressReleasePage.aspx?PRID=2287043&lang=1&reg=48',
-defence:'https://www.pib.gov.in/Pressreleaseshare.aspx?PRID=1835048',
-rail:'https://ncr.indianrailways.gov.in/uploads/files/1686893193735-RBE%2068_2023_merged.pdf',
-ssc:'https://ssc.gov.in/',
-rrb:'https://www.rrbapply.gov.in/',
-ncs:'https://www.ncs.gov.in/',
-desw:'https://www.desw.gov.in/en/Self-Employment-Schemes-DGR',
-skill:'https://www.skillindia.gov.in/',
-mudra:'https://www.mudra.org.in/'
-};
-const L=(u,t)=>`<a class="btn green" href="${u}" target="_blank" rel="noopener">${t} ↗</a>`;
-const I=(h,b)=>`<div class="info"><h2>${h}</h2>${b}</div>`;
-
-function openSheet(type){
- const s=document.getElementById('sheet'),title=document.getElementById('sheetTitle'),body=document.getElementById('sheetBody');
- let t='',b='';
- if(type==='army'){t='🪖 Join Indian Army';b=
- I('Official Recruitment Portal',`<p>Indian Army की Agniveer और अन्य recruitment categories के लिए official portal ही primary source है। Registration, CEE, admit card, rally, eligibility, document instructions और result यहीं verify करें.</p><p>Application में नाम, DOB और education details certificates के अनुसार भरें। किसी agent या unofficial WhatsApp/Telegram source पर भरोसा न करें.</p>${L(O.army,'Join Indian Army Official')}`)+
- I('Application Ready Checklist',`<p>Aadhaar/ID, mobile, email, 10th/12th/ITI/Diploma/Graduation certificates, photo, signature, domicile/category certificates और application acknowledgement सुरक्षित रखें.</p>`);
- }
- if(type==='jobs'){t='🔥 Latest Jobs';b=
- I('Official vacancy strategy',`<p>यह PWA बिना backend/API के government vacancies को auto-sync नहीं कर सकती। इसलिए expired job दिखाने की बजाय official portals दिए गए हैं। Notification PDF में total post, qualification, age cut-off, Ex-Agniveer benefit, fee, exam pattern, physical/medical और last date verify करें.</p>`)+
- I('SSC / CAPF / Assam Rifles',`${L(O.ssc,'SSC Official')}${L(O.capf,'CAPF Ex-Agniveer Policy')}`)+
- I('Indian Army',`${L(O.army,'Join Indian Army')}`)+
- I('Railways',`${L(O.rrb,'RRB Apply')}${L(O.rail,'Railway Ex-Agniveer Order')}`)+
- I('All India Jobs',`${L(O.ncs,'National Career Service')}`);
- }
- if(type==='policy'){t='📘 अग्निवीर Policy';b=
- I('Service & Regular Cadre',`<p>AGNIPATH framework में Agniveers सामान्यतः 4 years के लिए enrol होते हैं। Organisational requirement, applicable policy, performance और objective criteria के आधार पर each specific batch के up to 25% को regular cadre opportunity मिल सकती है.</p>${L(O.pibPolicy,'Official PIB Policy')}`)+
- I('Pay & Seva Nidhi',`<p>Original policy table में monthly customised package ₹30,000 से शुरू होकर 4th year ₹40,000 तक जाता है। Corpus contribution और matching Government contribution के आधार पर original policy ने 4-year completion पर applicable interest सहित लगभग ₹11.71 lakh Seva Nidhi reference दिया था.</p>`)+
- I('Insurance & Skills',`<p>Original policy में ₹48 lakh non-contributory life insurance cover का provision था। Skills/experience certification future civilian employment में उपयोगी हो सकती है.</p><p class="note">Current service-specific amendments/orders always verify करें.</p>`);
- }
- if(type==='reservation'){t='📊 Reservation';b=
- I('CAPF & Assam Rifles — 50%',`<p>21 July 2026 MHA/PIB reply के अनुसार Constable GD in CAPFs / Rifleman in Assam Rifles के लिए Ex-Agniveer category में 50% vacancies reservation, 3-year upper-age relaxation और first batch के लिए 5-year relaxation stated है. उसी reply में PST, PET और written examination exemption भी stated है.</p>${L(O.capf,'Official MHA/PIB')}`)+
- I('Ministry of Defence — 10%',`<p>Indian Coast Guard, eligible Defence Civilian posts और 16 Defence PSUs में requisite eligibility meet करने वाले Agniveers के लिए 10% reservation approval announced था.</p>${L(O.defence,'Official MoD/PIB')}`)+
- I('Indian Railways — 10% / 5%',`<p>Railway Board order में Level-1 पर 10% और Level-2 तथा above non-gazetted posts पर 5% horizontal reservation provision दिया गया है. Current RRB notification final होगा.</p>${L(O.rail,'Official Railway Order')}`);
- }
- if(type==='resettle'){t='♻️ Resettlement';b=
- I('DGR Self-Employment',`<p>DGR framework में Coal Loading & Transportation, Oil Product Agency eligibility certificate, COCO outlet management, Mother Dairy/Safal, CNG station management, LPG distributorship, Petrol/Diesel Retail Outlet, Security Agency और Technical Services जैसी schemes listed हैं.</p><div class="alert"><b>Important:</b> ये general Ex-Servicemen schemes हैं। Ex-Agniveer eligibility हर current scheme rule से अलग verify करें.</div>${L(O.desw,'DESW / DGR Official')}`)+
- I('Skill, Job & Finance',`${L(O.skill,'Skill India')}${L(O.ncs,'NCS Jobs')}${L(O.mudra,'PM MUDRA')}`);
- }
- if(type==='future'){t='🎯 My Future';b=I('Personal Career Planner',`<label>Age</label><input id="fAge" type="number" placeholder="24"><label>Qualification</label><select id="fQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>Service Completion Year</label><input id="fYear" type="number" placeholder="2030"><button class="action" onclick="futureResult()">Detailed Career Report</button>`);}
- if(type==='score'){t='🏆 Future Score';b=I('Readiness Score',`<label>Age</label><input id="sAge" type="number"><label>Qualification</label><select id="sQual"><option value="10">10th</option><option value="12">12th</option><option value="15">Graduate</option><option value="14">ITI / Diploma</option></select><label>Physical readiness 1–10</label><input id="sFit" type="number" min="1" max="10" value="7"><label>Technical/Computer skill 1–10</label><input id="sSkill" type="number" min="1" max="10" value="5"><button class="action" onclick="scoreResult()">Score Report</button><p class="note">Guidance score only, selection probability नहीं.</p>`);}
- if(type==='eligibility'){t='🔎 Eligibility Checker';b=I('Check',`<label>Age</label><input id="eAge" type="number"><label>Qualification</label><select id="eQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>Job Type</label><select id="eJob"><option>SSC GD / CAPF</option><option>Railway Level-1</option><option>Graduate Govt Jobs</option><option>Technical Jobs</option></select><button class="action" onclick="eligResult()">Eligibility Report</button>`);}
- if(type==='countdown'){t='⏰ Last Date Countdown';b=I('Vacancy Deadline',`<label>Vacancy Name</label><input id="dName"><label>Official Last Date</label><input id="dDate" type="date"><button class="action" onclick="deadlineResult()">Countdown</button>`);}
- if(type==='service'){t='⏳ Service Countdown';b=I('4-year reference',`<label>Joining Date</label><input id="jDate" type="date"><button class="action" onclick="serviceResult()">Service Timeline</button><p class="note">Actual service completion official records से verify करें.</p>`);}
- if(type==='seva'){t='💰 Seva Nidhi';b=I('Estimate',`<label>Completed Years</label><select id="svYears"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4" selected>4</option></select><button class="action" onclick="sevaResult()">Estimate</button><p class="note">Educational proportional estimate only.</p>`);}
- if(type==='salary'){t='💵 Salary Compare';b=I('How to compare correctly',`<p>Government salary = basic pay/pay level + applicable DA/HRA/allowances − deductions. CAPF, Railways और State Police में pay structure post/location पर depend करता है. Private jobs में company/location/skill/shift पर salary बदलती है.</p>${L(O.ssc,'SSC')}${L(O.rrb,'RRB')}${L(O.ncs,'NCS')}`);}
- if(type==='documents'){t='📄 Documents';b=I('Career Folder',`<p>Aadhaar, PAN, education certificates, domicile/category certificate where applicable, service/discharge related documents, skill certificates, passport photos, signature, mobile/email और bank details ready रखें.</p><p>हर recruitment की exact document list notification से verify करें.</p>`)+I('Digital Safety',`<p>Sensitive documents public GitHub repository या public folder में upload न करें. Private device/cloud storage में रखें.</p>`);}
- if(type==='quiz'){t='📚 Practice Quiz';b=I('Mini Test',`<p><b>Q1.</b> भारतीय संविधान कब लागू हुआ?</p><select id="q1"><option value="">Choose</option><option>15 Aug 1947</option><option>26 Jan 1950</option><option>26 Nov 1949</option></select><p><b>Q2.</b> 25 × 4 = ?</p><select id="q2"><option value="">Choose</option><option>80</option><option>100</option><option>120</option></select><p><b>Q3.</b> Victory का opposite?</p><select id="q3"><option value="">Choose</option><option>Defeat</option><option>Success</option><option>Win</option></select><button class="action" onclick="quizResult()">Submit</button>`);}
- if(type==='profile'){t='👤 My AV Profile';b=I('Save on this device',`<label>Name</label><input id="pName"><label>DOB</label><input id="pDob" type="date"><label>Qualification</label><select id="pQual"><option>10th</option><option>12th</option><option>Graduate</option><option>ITI / Diploma</option></select><label>State</label><input id="pState"><label>Service Completion Year</label><input id="pYear" type="number"><button class="action" onclick="profileSave()">Save Profile</button><div id="profileSaved" class="result"></div><p class="note">Stored locally in this browser only.</p>`);}
- if(type==='saved'){t='⭐ Saved Jobs';b=I('Save Job',`<label>Job Name</label><input id="svName"><label>Official Link (optional)</label><input id="svLink"><button class="action" onclick="saveJob()">Save</button><div id="savedList"></div>`);}
- title.innerHTML=t;body.innerHTML=b;s.style.display='block';document.body.style.overflow='hidden';window.scrollTo(0,0);
- if(type==='profile') loadProfile(); if(type==='saved') renderJobs();
+function score(){
+ let a=+age.value,f=+fit.value,qv=q.value;
+ let s=50+f*4;
+ if(a<=25)s+=10; else if(a<=30)s+=5;
+ if(qv==='Graduate')s+=10; else if(qv==='ITI / Diploma')s+=8; else if(qv==='12th')s+=5;
+ if(s>100)s=100;
+ scoreOut.innerHTML='<div class="score">'+s+'/100</div><b>Guidance Score</b><p>यह readiness score है, selection probability नहीं।</p>';
 }
-function closeSheet(){sheet.style.display='none';document.body.style.overflow='auto'}
-function result(title,html){sheetTitle.innerHTML=title;sheetBody.innerHTML=`<div class="info"><div class="result">${html}</div></div><div class="info"><h3>Official verification</h3><p>Final eligibility, dates, reservation और selection rules संबंधित official notification से verify करें.</p>${L(O.ssc,'SSC')}${L(O.army,'Army')}${L(O.rrb,'RRB')}</div>`}
-function futureResult(){let a=+fAge.value,q=fQual.value,y=fYear.value;if(!a)return result('🎯 Career Report','Age भरें.');let x=['CAPF/Assam Rifles policy + current SSC notice देखें','Railways Level-1/Level-2+ options check करें'];if(q==='Graduate')x.push('Graduate-level SSC/State jobs explore करें');if(q==='ITI / Diploma')x.push('Technical/industrial/railway roles explore करें');x.push('Skill India/NCS + resettlement backup plan रखें');result('🎯 Detailed Career Report',`<h2>${a} वर्ष • ${q}</h2><p>Completion year: ${y||'Not set'}</p><p>${x.map(i=>'• '+i).join('<br>')}</p>`)}
-function scoreResult(){let a=+sAge.value,q=+sQual.value,f=+sFit.value,k=+sSkill.value;if(!a)return result('🏆 Score','Age भरें.');let sc=Math.min(100,35+q+f*2+k*2+(a<=30?12:6));result('🏆 Future Score',`<h2>${sc}/100</h2><p>${sc>=80?'Strong readiness':sc>=60?'Good readiness':'Preparation needed'}</p><p>यह selection probability नहीं है.</p>`)}
-function eligResult(){let a=+eAge.value,q=eQual.value,j=eJob.value;if(!a)return result('🔎 Eligibility','Age भरें.');result('🔎 Eligibility Guidance',`<h2>${j}</h2><p>Age: ${a}, Qualification: ${q}</p><p>Current official vacancy notice के बिना final “Eligible” claim नहीं किया जाएगा. Age cut-off, qualification, category, medical/physical और Ex-Agniveer relaxation notification से verify करें.</p>`)}
-function deadlineResult(){if(!dDate.value)return result('⏰ Deadline','Last date डालें.');let e=new Date(dDate.value+'T00:00:00'),n=new Date();n.setHours(0,0,0,0);let d=Math.ceil((e-n)/86400000);result('⏰ Countdown',`<h2>${dName.value||'Vacancy'}</h2><p>${d<0?'Last date निकल चुकी है':d===0?'आज last date है':d+' दिन बाकी हैं'}</p>`)}
-function serviceResult(){if(!jDate.value)return result('⏳ Service','Joining date डालें.');let st=new Date(jDate.value),en=new Date(st);en.setFullYear(en.getFullYear()+4);let d=Math.ceil((en-new Date())/86400000);result('⏳ Service Timeline',`<h2>${en.toLocaleDateString('en-IN')}</h2><p>${d>0?d+' approx days remaining':'4-year reference period reached/passed'}</p>`)}
-function sevaResult(){let y=+svYears.value,v=11.71*(y/4);result('💰 Seva Nidhi',`<h2>Approx ₹${v.toFixed(2)} lakh</h2><p>Simple proportional educational estimate. Final settlement actual contribution, applicable interest और official records पर depend करेगा.</p>`)}
-function quizResult(){let s=0;if(q1.value==='26 Jan 1950')s++;if(q2.value==='100')s++;if(q3.value==='Defeat')s++;result('📚 Quiz Result',`<h2>${s}/3</h2><p>Correct: 26 Jan 1950 • 100 • Defeat</p>`)}
-function profileSave(){let d={name:pName.value,dob:pDob.value,qual:pQual.value,state:pState.value,year:pYear.value};localStorage.setItem('avnext_profile',JSON.stringify(d));profileSaved.innerHTML='✅ Profile saved on this device.'}
-function loadProfile(){let d=JSON.parse(localStorage.getItem('avnext_profile')||'null');if(!d)return;pName.value=d.name||'';pDob.value=d.dob||'';pQual.value=d.qual||'10th';pState.value=d.state||'';pYear.value=d.year||'';profileSaved.innerHTML='✅ Saved profile loaded.'}
-function saveJob(){let n=svName.value.trim(),u=svLink.value.trim();if(!n)return;let a=JSON.parse(localStorage.getItem('avnext_jobs')||'[]');a.push({n,u});localStorage.setItem('avnext_jobs',JSON.stringify(a));renderJobs()}
-function renderJobs(){let a=JSON.parse(localStorage.getItem('avnext_jobs')||'[]');let e=document.getElementById('savedList');if(!e)return;e.innerHTML='<div class="result">'+(a.length?a.map((x,i)=>`⭐ <b>${x.n}</b> ${x.u?`<a href="${x.u}" target="_blank">link</a>`:''}<br><button class="action" onclick="removeJob(${i})">Remove</button>`).join('<hr>'):'No saved jobs yet.')+'</div>'}
-function removeJob(i){let a=JSON.parse(localStorage.getItem('avnext_jobs')||'[]');a.splice(i,1);localStorage.setItem('avnext_jobs',JSON.stringify(a));renderJobs()}
-let deferredPrompt;
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();deferredPrompt=e;installBtn.style.display='block'});
-installBtn.addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt();await deferredPrompt.userChoice;deferredPrompt=null}else{alert('iPhone: Safari → Share → Add to Home Screen. Android: Chrome menu → Install app/Add to Home screen.')}})
-if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}))}
+function elig(){
+ let a=+jobAge.value,j=jobSel.value;
+ if(!a){eligOut.innerHTML='Age भरें';return;}
+ let r='Check Conditions';
+ if(j==='capf'&&a<=30)r='Eligible / Check Notification';
+ else if(j==='rail'&&a<=35)r='Eligible / Check Notification';
+ else if(j==='army'&&a<=28)r='Eligible / Check Notification';
+ else r='Not Eligible / Age Check';
+ eligOut.innerHTML='<b>'+r+'</b><p>Final eligibility official notification से verify करें.</p>';
+}
+let saved=[];
+function saveJob(n){
+ if(!saved.includes(n))saved.push(n);
+ savedJobs.innerHTML=saved.map(x=>'<div class="saved">⭐ '+x+'</div>').join('');
+}
+function saveProfile(){
+ localStorage.setItem('avprofile',profile.value);
+ profileOut.innerHTML='Profile saved on this device.';
+}
+window.onload=()=>{profile.value=localStorage.getItem('avprofile')||'';}
 </script>
 </body>
 </html>
